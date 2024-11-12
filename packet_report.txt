@@ -1,0 +1,143 @@
+
+##################
+### NEW PACKET ###
+##################
+- Return timestamp: 712129610 us.
+- Departure timestamps: 712103170 us.
+- RTT value: 26440 us.
+
+- Sending rate: 552.599 Mbps.
+
+- Packets sent: 5949 packets.
+- Packets received: 5949 packets.
+- Loss rate: 0.0%. 
+
+##################
+### NEW PACKET ###
+##################
+- Return timestamp: 712130169 us.
+- Departure timestamps: 712103322 us.
+- RTT value: 26847 us.
+
+- Sending rate: 554.669 Mbps.
+
+- Packets sent: 5950 packets.
+- Packets received: 5950 packets.
+- Loss rate: 0.0%. 
+
+##################
+### NEW PACKET ###
+##################
+- Return timestamp: 712130697 us.
+- Departure timestamps: 712103643 us.
+- RTT value: 27054 us.
+
+- Sending rate: 587.333 Mbps.
+
+- Packets sent: 5951 packets.
+- Packets received: 5951 packets.
+- Loss rate: 0.0%. 
+
+##################
+### NEW PACKET ###
+##################
+- Return timestamp: 712131572 us.
+- Departure timestamps: 712104486 us.
+- RTT value: 27086 us.
+
+- Sending rate: 354.473 Mbps.
+
+- Packets sent: 5952 packets.
+- Packets received: 5952 packets.
+- Loss rate: 0.0%. 
+
+##################
+### NEW PACKET ###
+##################
+- Return timestamp: 712132131 us.
+- Departure timestamps: 712104780 us.
+- RTT value: 27351 us.
+
+- Sending rate: 554.948 Mbps.
+
+- Packets sent: 5953 packets.
+- Packets received: 5953 packets.
+- Loss rate: 0.0%. 
+
+##################
+### NEW PACKET ###
+##################
+- Return timestamp: 712135735 us.
+- Departure timestamps: 712110379 us.
+- RTT value: 25356 us.
+
+- Sending rate: 86.09 Mbps.
+
+- Packets sent: 5954 packets.
+- Packets received: 5954 packets.
+- Loss rate: 0.0%. 
+
+##################
+### NEW PACKET ###
+##################
+- Return timestamp: 712135976 us.
+- Departure timestamps: 712110393 us.
+- RTT value: 25583 us.
+
+- Sending rate: 1287.635 Mbps.
+
+- Packets sent: 5955 packets.
+- Packets received: 5955 packets.
+- Loss rate: 0.0%. 
+
+##################
+### NEW PACKET ###
+##################
+- Return timestamp: 712136522 us.
+- Departure timestamps: 712110682 us.
+- RTT value: 25840 us.
+
+- Sending rate: 568.447 Mbps.
+
+- Packets sent: 5956 packets.
+- Packets received: 5956 packets.
+- Loss rate: 0.0%. 
+
+##################
+### NEW PACKET ###
+##################
+- Return timestamp: 712137068 us.
+- Departure timestamps: 712110989 us.
+- RTT value: 26079 us.
+
+- Sending rate: 568.542 Mbps.
+
+- Packets sent: 5957 packets.
+- Packets received: 5957 packets.
+- Loss rate: 0.0%. 
+
+##################
+### NEW PACKET ###
+##################
+- Return timestamp: 712137609 us.
+- Departure timestamps: 712111294 us.
+- RTT value: 26315 us.
+
+- Sending rate: 573.893 Mbps.
+
+- Packets sent: 5958 packets.
+- Packets received: 5958 packets.
+- Loss rate: 0.0%. 
+
+##################
+### NEW PACKET ###
+##################
+- Return timestamp: 712139045 us.
+- Departure timestamps: 712113259 us.
+- RTT value: 25786 us.
+
+- Sending rate: 216.245 Mbps.
+
+- Packets sent: 5959 packets.
+- Packets received: 5959 packets.
+- Loss rate: 0.0%. 
