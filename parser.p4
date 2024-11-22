@@ -24,15 +24,24 @@ parser MyParser(packet_in packet,
     state parse_ipv4 {
         packet.extract(hdr.ipv4);
         transition select(hdr.ipv4.protocol) {
-            TYPE_TCP: parse_tcp;
+            // TYPE_TCP: parse_tcp;
+            TYPE_UDP: parse_udp;
             default: accept;
         }
     }
 
-    state parse_tcp {
-        packet.extract(hdr.tcp);
-            transition accept;
+    state parse_udp {
+        packet.extract(hdr.udp);
+        transition select(hdr.udp.dstPort){
+            TYPE_CUSTOM: parse_report;
+            default: accept;
+        }
     }
+
+    // state parse_tcp {
+    //     packet.extract(hdr.tcp);
+    //         transition accept;
+    // }
 
     state parse_report {
         packet.extract(hdr.report);

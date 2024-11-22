@@ -1,5 +1,7 @@
 const bit<16> TYPE_IPV4 = 0x0800;
 const bit<8> TYPE_TCP = 6;
+const bit<8> TYPE_UDP = 17;
+const bit<16> TYPE_CUSTOM = 2001;
 
 
 #define MAX_HOPS 8
@@ -67,24 +69,25 @@ header tcp_t {
 
 header report_t {
     bit<8>  switch_ID;
-    bit<32> rtt;
-    bit<32> rtt_e;
-    bit<32> ingress_timestamp;
-    bit<32> egress_timestamp;
-    bit<32> q_delay;
+    // bit<32> rtt;
+    // bit<32> rtt_e;
+    bit<48> ingress_timestamp;
+    bit<48> egress_timestamp;
+    bit<48> q_delay;
     bit<24> q_depth;
-    bit<32> departure_timestamp;
-    bit<32> return_timestamp;
-    bit<32> departure_timestamp_e;
-    bit<32> return_timestamp_e;
-    bit<32> sending_rate;
-    bit<32> data_size;
+    // bit<32> departure_timestamp;
+    // bit<32> return_timestamp;
+    // bit<32> departure_timestamp_e;
+    // bit<32> return_timestamp_e;
+    // bit<32> sending_rate;
     bit<32> sending_rate_time;
     bit<32> sending_rate_current_time;
     bit<32> sending_rate_prev_time;
-    bit<32> loss_rate;
+    // bit<32> loss_rate;
     bit<32> packets_sent;
-    bit<32> packets_received;
+    bit<32> data_sent;
+    // bit<32> packets_received;
+    // bit<32> data_received;
     bit<48> interarrival_value;
 }
 
@@ -95,48 +98,54 @@ struct parser_metadata_t {
 struct metadata {
     @field_list(0)
     bit<8> switch_ID;
+    // @field_list(0)
+    // bit<32> rtt_sample;
+    // @field_list(0)
+    // bit<32> rtt_sample_e;
     @field_list(0)
-    bit<32> rtt_sample;
+    bit<48> ingress_timestamp;
     @field_list(0)
-    bit<32> rtt_sample_e;
+    bit<48> egress_timestamp;
     @field_list(0)
-    bit<32> ingress_timestamp;
-    @field_list(0)
-    bit<32> egress_timestamp;
-    @field_list(0)
-    bit<32> q_delay;
+    bit<48> q_delay;
     @field_list(0)
     bit<24> q_depth;
-    @field_list(0)
-    bit<32> departure_timestamp;
-    @field_list(0)
-    bit<32> return_timestamp;
-    @field_list(0)
-    bit<32> departure_timestamp_e;
-    @field_list(0)
-    bit<32> return_timestamp_e;
-    @field_list(0)
-    bit<32> sending_rate;
-    @field_list(0)
-    bit<32> data_size;
+    // @field_list(0)
+    // bit<32> departure_timestamp;
+    // @field_list(0)
+    // bit<32> return_timestamp;
+    // @field_list(0)
+    // bit<32> departure_timestamp_e;
+    // @field_list(0)
+    // bit<32> return_timestamp_e;
+    // @field_list(0)
+    // bit<32> sending_rate;
     @field_list(0)
     bit<32> sending_rate_time;
     @field_list(0)
     bit<32> sending_rate_current_time;
     @field_list(0)
     bit<32> sending_rate_prev_time;
-    @field_list(0)
-    bit<32> loss_rate;
+    // @field_list(0)
+    // bit<32> loss_rate;
     @field_list(0)
     bit<32> packets_sent;
     @field_list(0)
-    bit<32> packets_received;
+    bit<32> data_sent;
+    // @field_list(0)
+    // bit<32> packets_received;
+    // @field_list(0)
+    // bit<32> data_received;
     @field_list(0)
     bit<48> interarrival_value;
+    // @field_list(0)
+    // bit<16> sent_bytes_i;
+    // @field_list(0)
+    // bit<16> sent_bytes_e;
     bit<16> flow_id;
-    bool pkt_type;
-    bit<32> expected_ack;
-    bit<32> pkt_signature;
+    // bool pkt_type;
+    // bit<32> expected_ack;
+    // bit<32> pkt_signature;
 
     parser_metadata_t parser_metadata;
 }
@@ -144,6 +153,7 @@ struct metadata {
 struct headers {
     ethernet_t                  ethernet;
     ipv4_t                      ipv4;
-    tcp_t                       tcp;
+    // tcp_t                       tcp;
+    udp_t                       udp;
     report_t                    report;
 }
