@@ -4,7 +4,7 @@ import seaborn as sns
 from sklearn.metrics import confusion_matrix, classification_report
 
 from sklearn.ensemble import RandomForestClassifier
-from sklearn.model_selection import train_test_split
+from sklearn.model_selection import GridSearchCV, train_test_split
 from sklearn.metrics import accuracy_score
 from sklearn.tree import plot_tree
 
@@ -88,8 +88,23 @@ y = df["CCA"]
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
 
-rf = RandomForestClassifier(random_state=42)
+rf = RandomForestClassifier(max_depth=10, min_samples_split=5, random_state=42)
 rf.fit(X_train, y_train)
+
+
+# param_grid = {
+#     'n_estimators': [100, 200, 300],
+#     'max_depth': [None, 10, 20, 30],
+#     'min_samples_split': [2, 5, 10],
+#     'min_samples_leaf': [1, 2, 4],
+#     'bootstrap': [True, False]
+# }
+
+# grid_search = GridSearchCV(estimator=rf, param_grid=param_grid, cv=3, scoring='accuracy', verbose=2)
+# grid_search.fit(X_train, y_train)
+
+# best_rf = grid_search.best_estimator_
+# print(best_rf)
 
 
 y_pred = rf.predict(X_test)
