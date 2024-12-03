@@ -2,6 +2,7 @@ const bit<16> TYPE_IPV4 = 0x0800;
 const bit<8> TYPE_TCP = 6;
 const bit<8> TYPE_UDP = 17;
 const bit<16> TYPE_CUSTOM = 2001;
+const bit<8> TYPE_CUSTOM_I = 0xFF;
 
 
 #define MAX_HOPS 8
@@ -86,8 +87,8 @@ header report_t {
     // bit<32> loss_rate;
     bit<32> packets_sent;
     bit<32> data_sent;
-    // bit<32> packets_received;
-    // bit<32> data_received;
+    bit<32> packets_received;
+    bit<32> data_received;
     bit<48> interarrival_value;
 }
 
@@ -132,10 +133,10 @@ struct metadata {
     bit<32> packets_sent;
     @field_list(0)
     bit<32> data_sent;
-    // @field_list(0)
-    // bit<32> packets_received;
-    // @field_list(0)
-    // bit<32> data_received;
+    @field_list(0)
+    bit<32> packets_received;
+    @field_list(0)
+    bit<32> data_received;
     @field_list(0)
     bit<48> interarrival_value;
     // @field_list(0)
@@ -153,7 +154,7 @@ struct metadata {
 struct headers {
     ethernet_t                  ethernet;
     ipv4_t                      ipv4;
-    // tcp_t                       tcp;
+    tcp_t                       tcp;
     udp_t                       udp;
     report_t                    report;
 }

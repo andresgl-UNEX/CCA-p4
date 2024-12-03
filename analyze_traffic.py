@@ -54,7 +54,7 @@ def main():
     series_data_interarrival_time = {}
 
     duration = 180
-    filenames = ["reno.json", "cubic.json", "bbr.json"]
+    filenames = ["reno.json", "cubic.json", "bbr.json", "htcp.json", "bic.json"]
 
     for filename in filenames:
         filepath = os.path.join(directory, filename)
